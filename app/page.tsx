@@ -1,10 +1,14 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* HEADER */}
       <Header />
+
+      {/* HERO */}
       <Hero />
 
       {/* SECCIÓN TEST 1 */}
@@ -22,10 +26,8 @@ export default function Home() {
         <h2 className="text-5xl font-serif text-black">Sección 3</h2>
       </section>
 
-      {/* SECCIÓN TEST 4 */}
-      <section className="h-screen bg-black flex items-center justify-center">
-        <h2 className="text-5xl font-serif text-white">Footer test</h2>
-      </section>
+      {/* FOOTER */}
+      <Footer /> 
     </div>
   );
 }

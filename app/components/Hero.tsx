@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -10,7 +8,7 @@ export default function Hero() {
       {/* Overlay oscuro para legibilidad */}
       <div className="absolute inset-0 bg-black/90" />
 
-      {/* Blur lateral estilo referencia */}
+
       <div className="absolute inset-0">
         <div className="absolute left-0 top-0 h-full w-1/2 bg-[#1a0e0a]/70 blur-2xl" />
         <div className="absolute right-0 top-0 h-full w-1/3 bg-white/10 blur-3xl" />
@@ -26,12 +24,12 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="leading-[0.9]"
           >
-            <span className="block font-serif italic text-[clamp(3rem,7vw,6rem)] font-light">
+            <span className="block font-serif italic text-[clamp(4rem,7vw,6rem)] font-light">
               La creatividad
             </span>
 
-            <span className="block font-serif text-[clamp(3.2rem,7vw,6.2rem)] font-light">
-              es infinita
+            <span className="block font-serif text-[clamp(4rem,7vw,6.2rem)] font-light">
+              es <span className="font-extrabold tracking-wide">infinita</span>
             </span>
           </motion.h1>
 
