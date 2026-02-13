@@ -12,7 +12,7 @@ export default function Footer() {
     const whatsappLink = `https://wa.me/${phone}?text=${msg}`;
 
   return (
-    <footer className="relative w-full bg-black text-white py-28 px-6 overflow-hidden">
+    <footer className="relative w-full bg-linear-to-br from-black via-neutral-900 to-neutral-800 text-white py-28 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
         {/* TEXTO SUPERIOR */}
         <motion.h2

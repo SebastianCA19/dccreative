@@ -36,6 +36,10 @@
   animation: fadeInSoft 1.2s cubic-bezier(.22,1,.36,1) forwards;
 }
 
+html{
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
 
 body {
   background: var(--background);

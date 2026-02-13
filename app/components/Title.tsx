@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useMemo } from "react";
 
-export default function HugeTitle({ title }: { title: string }) {
+export default function HugeTitle({ title, color }: { title: string, color?: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   const fontSize = useMemo(() => {
@@ -27,7 +27,7 @@ export default function HugeTitle({ title }: { title: string }) {
   return (
     <section
       ref={ref}
-      className="relative h-auto bg-white overflow-hidden flex justify-center"
+      className="relative h-auto overflow-hidden flex justify-center"
     >
       <motion.h2
         style={{
@@ -37,6 +37,7 @@ export default function HugeTitle({ title }: { title: string }) {
           filter: blur,
           transformOrigin: "center center",
           fontSize,
+          color: color || "#000",
         }}
         className="
           font-extrabold

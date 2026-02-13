@@ -32,7 +32,7 @@ export default function Header() {
               <motion.a
                 key={item}
                 whileHover={{ y: -2 }}
-                className="relative group cursor-pointer text-white"
+                className="relative group cursor-pointer text-white text-lg font-medium"
               >
                 {item}
 
@@ -87,7 +87,7 @@ export default function Header() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.6, ease: [0.77, 0, 0.175, 1] }}
-            className="fixed inset-0 z-40 bg-white flex items-center justify-center"
+            className="fixed inset-0 z-40 bg-white flex items-center justify-center overflow-none"
           >
             <motion.nav
               initial="hidden"

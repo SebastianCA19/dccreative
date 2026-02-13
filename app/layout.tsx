@@ -13,13 +13,21 @@ export const inter = Inter({
 
 import "./globals.css";
 
+export const metadata: Metadata = {
+  title: "DC CREATIVE",
+  description: "Agencia de branding y marketing digital",
+  icons: {
+    icon: "/favicon.ico",
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${playfair.variable} ${inter.variable} font-sans`}
       >
