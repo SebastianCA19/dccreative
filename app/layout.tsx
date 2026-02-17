@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import type { Viewport } from "next";
 
 export const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   }
 };
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
 
 export default function RootLayout({
   children,

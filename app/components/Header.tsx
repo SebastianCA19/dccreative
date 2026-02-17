@@ -3,12 +3,24 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = ["¿Quiénes Somos?", "Servicios", "Portafolio"];
+  const goto = ["#esencia", "#servicios", "#portafolio"];
 
+  const handleScroll = (e: React.MouseEvent, targetId: string) => {
+    e.preventDefault();
+
+    const element = document.getElementById(targetId);
+    if(element){
+      if(menuOpen) setMenuOpen(false);
+      const top = element.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({top, behavior: "smooth"});
+    }
+  }
   return (
     <>
       {/* HEADER */}
@@ -33,6 +45,8 @@ export default function Header() {
                 key={item}
                 whileHover={{ y: -2 }}
                 className="relative group cursor-pointer text-white text-lg font-medium"
+                href={goto[links.indexOf(item)]}
+                onClick={(e) => handleScroll(e, goto[links.indexOf(item)].substring(1))}
               >
                 {item}
 
@@ -103,7 +117,7 @@ export default function Header() {
               }}
               className="flex flex-col items-center space-y-10 text-2xl font-medium font-serif tracking-widest"
             >
-              {["¿QUIÉNES SOMOS?", "SERVICIOS", "PORTAFOLIO"].map((item) => (
+              {links.map((item) => (
                 <motion.a
                   key={item}
                   variants={{
@@ -111,8 +125,9 @@ export default function Header() {
                     show: { opacity: 1, y: 0 },
                   }}
                   whileHover={{ scale: 1.05 }}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleScroll(e, goto[links.indexOf(item)].substring(1))}
                   className="relative group cursor-pointer text-black"
+                  href={goto[links.indexOf(item)]}
                 >
                   {item}
                   <span className="absolute left-0 -bottom-2 h-0.5 w-0 bg-black transition-all duration-300 group-hover:w-full" />

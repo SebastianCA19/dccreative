@@ -13,7 +13,7 @@ export default function Redes() {
     if (!inView) return;
 
     let start = 0;
-    const end = 80; // puedes cambiar %
+    const end = 80;
     const duration = 800;
     const increment = end / (duration / 16);
 
@@ -35,8 +35,13 @@ export default function Redes() {
       {/* INTRO */}
       <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
         <div>
-          <h3 className="text-4xl font-serif mb-6 font-bold text-white">
-            MANEJO ESTRATEGICO DE REDES SOCIALES
+          <div className="flex items-center justify-end">
+            <h4 className="text-sm mb-4 text-neutral-700 px-4 py-2 bg-white inline-block rounded-full font-semibold">
+              Servicio principal
+            </h4>
+          </div>
+          <h3 className="text-4xl md:text-5xl font-serif leading-tight mx-auto text-white font-bold mb-10 mt-5">
+            Gestionar redes sociales no es solo publicar contenido, es construir una comunidad
           </h3>
 
           <p className="text-neutral-200 leading-relaxed mb-6 text-lg">
@@ -222,6 +227,7 @@ export default function Redes() {
           />
           <span className="relative z-10">Solicitar propuesta</span>
         </motion.button>
+        <p className="text-xs mt-2 text-neutral-400">El precio depende de la dificultad del proyecto a realizar</p>
       </div>
 
     </section>

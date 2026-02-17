@@ -28,7 +28,7 @@ export default function Home() {
       <Hero />
 
       {/* ESENCIA */}
-      <section className="bg-[#f2f0eb] overflow-hidden">
+      <section id="esencia" className="bg-[#f2f0eb] overflow-hidden">
         <Title title="ESENCIA" color="#171717" />
 
         <div className="max-w-350 mx-auto px-6 md:px-12 md:py-16 py-5">
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* SERVICIOS */}
-      <section className="bg-linear-to-br from-black via-neutral-900 to-neutral-800 overflow-hidden">
+      <section id="servicios" className="bg-linear-to-br from-black via-neutral-900 to-neutral-800 overflow-hidden">
         <div className="mt-7 lg:mt-0">
           <Title title="SERVICIOS" color="#ffffff" />
         </div>
@@ -222,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* SECCIÓN TEST 3 */}
-      <section className="h-screen bg-neutral-200 flex items-center justify-center">
+      <section id="portafolio" className="h-screen bg-neutral-200 flex items-center justify-center">
         <h2 className="text-5xl font-serif text-black">Sección 3</h2>
       </section>
 
