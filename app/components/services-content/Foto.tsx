@@ -32,11 +32,11 @@ export default function Foto() {
   };
 
   return (
-    <section className="w-full py-24">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="w-full">
+      <div className="max-w-6xl mx-auto">
 
         {/* INTRO */}
-        <div className="text-center mb-20">
+        <div className="text-left mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight font-serif mb-6">
             Contenido visual que
             <br />
@@ -77,8 +77,8 @@ export default function Foto() {
         </div>
 
         {/* GALERÍA */}
-        <div className="mb-32">
-          <h3 className="text-4xl font-bold text-white text-center mb-12 font-serif">
+        <div className="mb-15">
+          <h3 className="text-7xl font-bold text-white text-center mb-12 font-serif tracking-widest">
             NUESTRO TRABAJO
           </h3>
 
@@ -149,7 +149,7 @@ export default function Foto() {
         </div>
 
         {/* QUOTE VISUAL */}
-        <div className="text-center py-20 mb-32 border-y border-white/20">
+        <div className="text-center py-20 border-y border-white/20">
           <p className="text-4xl md:text-5xl font-serif leading-tight max-w-3xl mx-auto text-white font-bold">
             El contenido visual de calidad no es un gasto,
             es una inversión en la percepción de tu marca.
@@ -157,7 +157,7 @@ export default function Foto() {
         </div>
 
         {/* CTA */}
-        <div className="text-center bg-white/5 rounded-3xl px-8 py-10 shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
+        <div className="text-center rounded-3xl px-8 py-10">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif">
             Llevemos tu marca a otro nivel visual
           </h3>

@@ -6,7 +6,7 @@ import Landing from "./services-content/Landing";
 
 export default function ServiceContent({ active }: { active: number }) {
   return (
-    <div className="relative mt-10 h-auto p-10 md:p-20">
+    <div className="relative mt-10 h-auto p-8 md:px-20 md:py-16">
       <AnimatePresence mode="wait">
         <motion.div
           key={active}
