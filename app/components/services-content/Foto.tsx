@@ -43,7 +43,7 @@ export default function Foto({ whatsappLink }: { whatsappLink: string }) {
             conecta y vende
           </h1>
 
-          <p className="mt-6 text-neutral-200 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="mt-6 text-neutral-200 max-w-2xl text-lg leading-relaxed">
             Creamos fotografías y piezas audiovisuales que elevan la
             percepción de tu marca y la hacen destacar en redes,
             campañas y plataformas digitales.
