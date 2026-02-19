@@ -17,6 +17,13 @@ export default function Home() {
     "LANDING PAGE",
   ];
 
+  const phone = "573008502820";
+  const msg = encodeURIComponent(
+    "Hola, ¡Estoy interesado en los servicios de la agencia!"
+  );
+
+  const whatsappLink = `https://wa.me/${phone}?text=${msg}`;
+
   const [active, setActive] = useState(0);
 
   return (
@@ -218,16 +225,16 @@ export default function Home() {
           value={active}
           onChange={setActive}
         />
-        <ServiceContent active={active} />
+        <ServiceContent active={active} whatsappLink={whatsappLink} />
       </section>
 
       {/* SECCIÓN TEST 3 */}
-      <section id="portafolio" className="h-screen bg-neutral-200 flex items-center justify-center">
-        <h2 className="text-5xl font-serif text-black">Sección 3</h2>
+      <section id="portafolio" className="bg-[#f2f0eb] overflow-hidden">
+        <Title title="PORTAFOLIO" color="#171717" />
       </section>
 
       {/* FOOTER */}
-      <Footer />
+      <Footer whatsappLink={whatsappLink}/>
     </div>
   );
 }

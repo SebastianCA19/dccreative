@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-export default function Redes() {
+export default function Redes({ whatsappLink }: { whatsappLink: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const [count, setCount] = useState(0);
@@ -216,6 +216,7 @@ export default function Redes() {
             rest: { scale: 1 },
             hover: { scale: 1.05 }
           }}
+          onClick={() => window.open(whatsappLink, "blank")}
         >
           <motion.div
             className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0"

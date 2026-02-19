@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Landing() {
+export default function Landing({ whatsappLink }: { whatsappLink: string }) {
   return (
     <section className="text-white">
 
@@ -225,6 +225,7 @@ export default function Landing() {
             rest: { scale: 1 },
             hover: { scale: 1.05 }
           }}
+          onClick={() => window.open(whatsappLink, "blank")}
         >
           <motion.div
             className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0"

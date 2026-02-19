@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useMemo } from "react";
 
-export default function HugeTitle({ title, color }: { title: string, color?: string }) {
+export default function Title({ title, color }: { title: string, color?: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   const fontSize = useMemo(() => {

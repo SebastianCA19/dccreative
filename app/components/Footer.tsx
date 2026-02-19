@@ -2,14 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Footer() {
-
-    const phone = "573008502820";
-    const msg = encodeURIComponent(
-    "Hola, ¡Estoy interesado en los servicios de la agencia!"
-    );
-
-    const whatsappLink = `https://wa.me/${phone}?text=${msg}`;
+export default function Footer({ whatsappLink }: { whatsappLink: string }) {
 
   return (
     <footer className="relative w-full bg-linear-to-br from-black via-neutral-900 to-neutral-800 text-white py-28 px-6 overflow-hidden">

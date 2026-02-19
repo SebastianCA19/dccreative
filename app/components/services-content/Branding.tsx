@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Branding() {
+export default function Branding({ whatsappLink }: { whatsappLink: string }) {
   return (
     <section className="text-white">
 
@@ -142,6 +142,7 @@ export default function Branding() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          onClick={() => window.open(whatsappLink, "blank")}
         >
           <motion.div
             className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/60 to-transparent"

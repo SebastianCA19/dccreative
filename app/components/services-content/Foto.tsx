@@ -10,7 +10,7 @@ const images = [
     "galery4.jpg",
 ];
 
-export default function Foto() {
+export default function Foto({ whatsappLink }: { whatsappLink: string }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -182,6 +182,7 @@ export default function Foto() {
               hover: { x: "100%", opacity: 0.3 }
             }}
             transition={{ duration: 0.6 }}
+            onClick={() => window.open(whatsappLink, "blank")}
           />
           <span className="relative z-10">Solicitar propuesta personalizada</span>
         </motion.button>
