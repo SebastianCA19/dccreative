@@ -8,6 +8,7 @@ import ServiceSelect from "./components/ServicesSelect";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ServiceContent from "./components/ServiceContent";
+import Portfolio from "./components/Portfolio";
 
 export default function Home() {
   const services = [
@@ -228,10 +229,8 @@ export default function Home() {
         <ServiceContent active={active} whatsappLink={whatsappLink} />
       </section>
 
-      {/* SECCIÓN TEST 3 */}
-      <section id="portafolio" className="bg-[#f2f0eb] overflow-hidden">
-        <Title title="PORTAFOLIO" color="#171717" />
-      </section>
+      {/* PORTAFOLIO */}
+      <Portfolio />
 
       {/* FOOTER */}
       <Footer whatsappLink={whatsappLink}/>
