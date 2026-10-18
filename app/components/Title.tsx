@@ -21,8 +21,6 @@ export default function Title({ title, color }: { title: string, color?: string 
 
   const scaleY = useTransform(scrollYProgress, [0, 1], [1.15, 0.8]);
   const scaleX = useTransform(scrollYProgress, [0, 1], [1.15, 0.8]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, 0]);
-  const blur = useTransform(scrollYProgress, [0, 1], ["blur(8px)", "blur(0px)"]);
 
   return (
     <section
@@ -33,8 +31,6 @@ export default function Title({ title, color }: { title: string, color?: string 
         style={{
           scaleY,
           scaleX,
-          y,
-          filter: blur,
           transformOrigin: "center center",
           fontSize,
           color: color || "#000",
