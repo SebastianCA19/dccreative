@@ -94,7 +94,7 @@ function VerifiedBadge() {
   return (
     <svg viewBox="0 0 24 24" aria-label="Cuenta verificada" className="w-4 h-4 shrink-0">
       <path
-        fill="#0095f6"
+        fill="#171717"
         d="M12 1.5l2.35 1.9 2.99-.4 1.2 2.77 2.77 1.2-.4 2.99L22.5 12l-1.9 2.35.4 2.99-2.77 1.2-1.2 2.77-2.99-.4L12 22.5l-2.35-1.9-2.99.4-1.2-2.77-2.77-1.2.4-2.99L1.5 12l1.9-2.35-.4-2.99 2.77-1.2 1.2-2.77 2.99.4L12 1.5z"
       />
       <path
@@ -122,18 +122,20 @@ function Avatar({
   const noPhoto = !photo || attempt >= IMAGE_EXTENSIONS.length;
 
   return (
-    <span className="shrink-0 w-16 h-16 rounded-full p-[2.5px] bg-[conic-gradient(from_200deg,#f9ce34,#ee2a7b,#6228d7,#f9ce34)] transition-transform duration-500 group-hover:scale-105">
-      <span className="flex w-full h-full items-center justify-center rounded-full overflow-hidden bg-[#171717]">
+    <span className="shrink-0 w-16 h-16 rounded-full p-[2.5px] bg-[conic-gradient(from_200deg,#404040,#171717,#0a0a0a,#171717,#404040)] transition-transform duration-500 group-hover:scale-105">
+      <span className="flex w-full h-full items-center justify-center rounded-full overflow-hidden bg-white">
         {noPhoto ? (
-          <span className="font-serif text-xl leading-none text-white/90 select-none">
+          <span className="font-serif text-xl leading-none text-[#171717] select-none">
             {monogram}
           </span>
         ) : (
           <img
             src={`/portfolio/${encodeURIComponent(photo)}${IMAGE_EXTENSIONS[attempt]}`}
             alt={name}
+            width={64}
+            height={64}
             onError={() => setAttempt((n) => n + 1)}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover grayscale"
           />
         )}
       </span>
