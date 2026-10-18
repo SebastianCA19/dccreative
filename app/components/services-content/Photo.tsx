@@ -10,7 +10,7 @@ const images = [
     "galery4.jpg",
 ];
 
-export default function Foto({ whatsappLink }: { whatsappLink: string }) {
+export default function Photo({ whatsappLink }: { whatsappLink: string }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

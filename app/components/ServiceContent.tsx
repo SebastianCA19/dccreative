@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Redes from "./services-content/Redes";
+import SocialMedia from "./services-content/SocialMedia";
 import Branding from "./services-content/Branding";
-import Foto from "./services-content/Foto";
+import Photo from "./services-content/Photo";
 import Landing from "./services-content/Landing";
 
 export default function ServiceContent({ 
@@ -21,9 +21,9 @@ export default function ServiceContent({
           exit={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.5, ease: [0.22,1,0.36,1] }}
         >
-          {active === 0 && <Redes whatsappLink={whatsappLink} />}
+          {active === 0 && <SocialMedia whatsappLink={whatsappLink} />}
           {active === 1 && <Branding whatsappLink={whatsappLink} />}
-          {active === 2 && <Foto whatsappLink={whatsappLink} />}
+          {active === 2 && <Photo whatsappLink={whatsappLink} />}
           {active === 3 && <Landing whatsappLink={whatsappLink} />}
         </motion.div>
       </AnimatePresence>
