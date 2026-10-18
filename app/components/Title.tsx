@@ -22,7 +22,7 @@ export default function Title({ title, color }: { title: string, color?: string 
   const scaleY = useTransform(scrollYProgress, [0, 1], [1.15, 0.8]);
   const scaleX = useTransform(scrollYProgress, [0, 1], [1.15, 0.8]);
   const y = useTransform(scrollYProgress, [0, 1], [0, 0]);
-  const blur = useTransform(scrollYProgress, [0, 1], ["8px", "0px"]);
+  const blur = useTransform(scrollYProgress, [0, 1], ["blur(8px)", "blur(0px)"]);
 
   return (
     <section
