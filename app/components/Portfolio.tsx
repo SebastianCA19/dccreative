@@ -94,7 +94,7 @@ function VerifiedBadge() {
   return (
     <svg viewBox="0 0 24 24" aria-label="Cuenta verificada" className="w-4 h-4 shrink-0">
       <path
-        fill="#171717"
+        fill="#0095f6"
         d="M12 1.5l2.35 1.9 2.99-.4 1.2 2.77 2.77 1.2-.4 2.99L22.5 12l-1.9 2.35.4 2.99-2.77 1.2-1.2 2.77-2.99-.4L12 22.5l-2.35-1.9-2.99.4-1.2-2.77-2.77-1.2.4-2.99L1.5 12l1.9-2.35-.4-2.99 2.77-1.2 1.2-2.77 2.99.4L12 1.5z"
       />
       <path
@@ -122,10 +122,10 @@ function Avatar({
   const noPhoto = !photo || attempt >= IMAGE_EXTENSIONS.length;
 
   return (
-    <span className="shrink-0 w-16 h-16 rounded-full p-[2.5px] bg-[conic-gradient(from_200deg,#404040,#171717,#0a0a0a,#171717,#404040)] transition-transform duration-500 group-hover:scale-105">
-      <span className="flex w-full h-full items-center justify-center rounded-full overflow-hidden bg-white">
+    <span className="shrink-0 w-16 h-16 rounded-full p-[2.5px] bg-[conic-gradient(from_200deg,#f9ce34,#ee2a7b,#6228d7,#f9ce34)] transition-transform duration-500 group-hover:scale-105">
+      <span className="flex w-full h-full items-center justify-center rounded-full overflow-hidden bg-[#171717]">
         {noPhoto ? (
-          <span className="font-serif text-xl leading-none text-[#171717] select-none">
+          <span className="font-serif text-xl leading-none text-white/90 select-none">
             {monogram}
           </span>
         ) : (
@@ -135,7 +135,7 @@ function Avatar({
             width={64}
             height={64}
             onError={() => setAttempt((n) => n + 1)}
-            className="w-full h-full object-cover grayscale"
+            className="w-full h-full object-cover"
           />
         )}
       </span>
@@ -181,7 +181,7 @@ export default function Portfolio() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               whileHover={{ y: -6 }}
-              className={`group flex flex-col bg-white rounded-2xl shadow-lg ring-1 ring-black/5 overflow-hidden transition-shadow duration-500 hover:shadow-2xl ${
+              className={`group flex flex-col bg-[#faf9f6] rounded-2xl ring-1 ring-[#171717]/8 shadow-[0_2px_12px_rgba(23,23,23,0.05)] overflow-hidden transition-shadow duration-500 hover:shadow-[0_12px_32px_rgba(23,23,23,0.10)] ${
                 centerLastCard && i === clients.length - 1 ? "lg:col-start-2" : ""
               }`}
             >
@@ -210,7 +210,7 @@ export default function Portfolio() {
               </div>
 
               {/* INFO */}
-              <div className="px-6 pt-4 pb-5 border-t border-[#171717]/5">
+              <div className="px-6 pt-4 pb-5 border-t border-[#171717]/8">
                 <span className="text-xs tracking-[0.2em] uppercase text-neutral-500">
                   {client.industry}
                 </span>
