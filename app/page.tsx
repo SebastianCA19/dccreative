@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import ServiceContent from "./components/ServiceContent";
 import Portfolio from "./components/Portfolio";
+import CaseStudy from "./components/CaseStudy";
 
 export default function Home() {
   const services = [
@@ -231,6 +232,9 @@ export default function Home() {
 
       {/* PORTAFOLIO */}
       <Portfolio />
+
+      {/* CASO DE ÉXITO */}
+      <CaseStudy />
 
       {/* FOOTER */}
       <Footer whatsappLink={whatsappLink}/>

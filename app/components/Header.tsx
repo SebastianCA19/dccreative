@@ -8,8 +8,8 @@ import { Link } from "react-scroll";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const links = ["¿Quiénes Somos?", "Servicios", "Portafolio"];
-  const goto = ["#esencia", "#servicios", "#portafolio"];
+  const links = ["¿Quiénes Somos?", "Servicios", "Portafolio", "Caso de Éxito"];
+  const goto = ["#esencia", "#servicios", "#portafolio", "#caso"];
 
   const handleScroll = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
