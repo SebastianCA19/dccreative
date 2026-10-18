@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-scroll";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,22 +23,16 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-      <header className="absolute top-0 left-0 z-50 w-full h-20 flex items-center justify-center">
-          {/* LOGO */}
-          <motion.div
-            className="absolute left-6 md:left-auto md:static"
+      {/* Tres columnas: el logo queda centrado por columnas simétricas,
+          así el nav nunca puede encimarse con él. */}
+      <header className="absolute top-0 left-0 z-50 w-full h-20 px-6 grid grid-cols-[auto_1fr_auto] xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center">
+          {/* NAV DESKTOP */}
+          <motion.nav
             animate={{ opacity: menuOpen ? 0 : 1 }}
+            className={`hidden xl:flex col-start-1 items-center justify-self-start gap-6 font-sans text-sm tracking-wide ${
+              menuOpen ? "pointer-events-none" : ""
+            }`}
           >
-            <Image
-              src={"/white.png"}
-              alt="logo"
-              width={90}
-              height={40}
-            />
-          </motion.div>
-
-            {/* NAV DESKTOP */}
-          <nav className="hidden md:flex absolute left-10 space-x-10 font-sans text-sm tracking-wide">
             {links.map((item) => (
               <motion.a
                 key={item}
@@ -54,12 +47,27 @@ export default function Header() {
                 <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-white origin-center scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
               </motion.a>
             ))}
-          </nav>
+          </motion.nav>
+
+          {/* LOGO */}
+          <motion.div
+            className="col-start-1 xl:col-start-2 xl:justify-self-center"
+            animate={{ opacity: menuOpen ? 0 : 1 }}
+          >
+            <Image
+              src={"/white.png"}
+              alt="logo"
+              width={90}
+              height={40}
+            />
+          </motion.div>
 
           {/* HAMBURGUESA / X */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="absolute right-6 md:hidden w-8 h-8 flex items-center justify-center z-60"
+            className={`col-start-3 justify-self-end w-8 h-8 items-center justify-center z-60 ${
+              menuOpen ? "flex" : "flex xl:hidden"
+            }`}
           >
             <div className="relative w-6 h-6">
               <motion.span
