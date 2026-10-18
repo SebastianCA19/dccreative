@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-export default function Redes({ whatsappLink }: { whatsappLink: string }) {
+export default function SocialMedia({ whatsappLink }: { whatsappLink: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const [count, setCount] = useState(0);

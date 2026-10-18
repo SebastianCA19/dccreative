@@ -49,9 +49,12 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="mt-8"
           >
-            <button className="rounded-lg border border-white/40 px-8 py-3 text-sm tracking-wide transition hover:bg-white hover:text-black">
+            <a
+              href="#servicios"
+              className="inline-block rounded-lg border border-white/40 px-8 py-3 text-sm tracking-wide transition hover:bg-white hover:text-black cursor-pointer"
+            >
               Ver servicios
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

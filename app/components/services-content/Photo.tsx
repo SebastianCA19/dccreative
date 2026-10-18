@@ -10,7 +10,7 @@ const images = [
     "galery4.jpg",
 ];
 
-export default function Foto({ whatsappLink }: { whatsappLink: string }) {
+export default function Photo({ whatsappLink }: { whatsappLink: string }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -174,6 +174,7 @@ export default function Foto({ whatsappLink }: { whatsappLink: string }) {
             rest: { scale: 1 },
             hover: { scale: 1.05 }
           }}
+          onClick={() => window.open(whatsappLink, "blank")}
         >
           <motion.div
             className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0"
@@ -182,7 +183,6 @@ export default function Foto({ whatsappLink }: { whatsappLink: string }) {
               hover: { x: "100%", opacity: 0.3 }
             }}
             transition={{ duration: 0.6 }}
-            onClick={() => window.open(whatsappLink, "blank")}
           />
           <span className="relative z-10">Solicitar propuesta personalizada</span>
         </motion.button>
