@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 
 const images = [
     "galery1.jpg",
@@ -26,7 +26,10 @@ export default function Photo({ whatsappLink }: { whatsappLink: string }) {
     setIndex((index - 1 + images.length) % images.length);
 
   // detectar swipe
-  const handleDragEnd = (e: any, info: any) => {
+  const handleDragEnd = (
+    _event: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo
+  ) => {
     if (info.offset.x < -80) next();
     if (info.offset.x > 80) prev();
   };
