@@ -1,39 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence, type PanInfo } from "framer-motion";
-
-const images = [
-    "galery1.jpg",
-    "galery2.jpg",
-    "galery3.jpg",
-    "galery4.jpg",
-];
+import { motion } from "framer-motion";
+import GalleryCarousel from "./GalleryCarousel";
+import { GALLERY } from "./gallery";
 
 export default function Photo({ whatsappLink }: { whatsappLink: string }) {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const next = () => setIndex((index + 1) % images.length);
-  const prev = () =>
-    setIndex((index - 1 + images.length) % images.length);
-
-  // detectar swipe
-  const handleDragEnd = (
-    _event: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo
-  ) => {
-    if (info.offset.x < -80) next();
-    if (info.offset.x > 80) prev();
-  };
-
   return (
     <section className="w-full">
       <div className="max-w-6xl mx-auto">
@@ -81,74 +52,7 @@ export default function Photo({ whatsappLink }: { whatsappLink: string }) {
 
         {/* GALERÍA */}
         <div className="mb-15">
-          <h3 className="text-7xl font-bold text-white text-center mb-12 font-serif tracking-widest">
-            NUESTRO TRABAJO
-          </h3>
-
-          <div className="relative w-full max-w-4xl mx-auto aspect-3/4 md:aspect-14/10 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
-            <AnimatePresence initial={false}>
-              <motion.img
-                key={index}
-                src={images[index]}
-                className="absolute inset-0 w-full h-full object-cover cursor-grab active:cursor-grabbing"
-                initial={{ opacity: 0, scale: 1.2 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ 
-                  duration: 0.7,
-                  ease: [0.43, 0.13, 0.23, 0.96]
-                }}
-
-                // swipe mobile
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                onDragEnd={handleDragEnd}
-              />
-            </AnimatePresence>
-          </div>
-          {/* CONTROLES */}
-          <div className="flex justify-center items-center gap-6 mt-8">
-            {/* Botón anterior */}
-            <motion.button
-              onClick={prev}
-              className="w-12 h-12 rounded-full border-2 border-white/20 bg-white/5 hover:bg-white hover:border-white hover:text-black text-white transition-all duration-300 flex items-center justify-center font-bold text-lg shadow-xl backdrop-blur-sm hover:cursor-pointer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              ←
-            </motion.button>
-
-            {/* Indicadores (dots) */}
-            <div className="flex gap-2">
-              {images.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setIndex(i)}
-                  className={`transition-all duration-300 rounded-full ${
-                    i === index 
-                      ? "w-8 h-3 bg-white" 
-                      : "w-3 h-3 bg-white/30 hover:bg-white/50"
-                  }`}
-                  aria-label={`Ir a imagen ${i + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Botón siguiente */}
-            <motion.button
-              onClick={next}
-              className="w-12 h-12 rounded-full border-2 border-white/20 bg-white/5 hover:bg-white hover:border-white hover:text-black text-white transition-all duration-300 flex items-center justify-center font-bold text-lg shadow-xl backdrop-blur-sm hover:cursor-pointer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              →
-            </motion.button>
-          </div>
-
-          {/* Contador */}
-          <p className="text-center mt-4 text-neutral-400 text-sm">
-            {index + 1} / {images.length}
-          </p>
+          <GalleryCarousel items={GALLERY} />
         </div>
 
         {/* QUOTE VISUAL */}
