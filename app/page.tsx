@@ -140,7 +140,7 @@ export default function Home() {
             {/* IMAGEN */}
             <div className="w-full lg:w-1/2">
               <img
-                src="/photo_2.jpg"
+                src="/photo_2.avif"
                 alt="Esencia DC Creative"
                 className="
             w-full 

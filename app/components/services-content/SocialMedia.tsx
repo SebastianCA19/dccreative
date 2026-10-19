@@ -60,7 +60,7 @@ export default function SocialMedia({ whatsappLink }: { whatsappLink: string }) 
         </div>
 
         <div className="w-full h-105 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-          <img src="/redes.jpeg" className="w-full h-full object-cover filter grayscale" alt="Redes sociales" />
+          <img src="/redes.avif" className="w-full h-full object-cover filter grayscale" alt="Redes sociales" />
         </div>
       </div>
 

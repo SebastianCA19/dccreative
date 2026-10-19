@@ -61,7 +61,7 @@ export default function Landing({ whatsappLink }: { whatsappLink: string }) {
         </div>
 
         <img
-          src="/landing.jpeg"
+          src="/landing.avif"
           className="w-full h-105 object-cover rounded-2xl shadow-2xl ring-1 ring-white/10 filter grayscale"
           alt="Landing page efectiva"
         />

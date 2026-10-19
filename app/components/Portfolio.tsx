@@ -106,7 +106,7 @@ function VerifiedBadge() {
 }
 
 /** Extensiones que se prueban, en orden. */
-const IMAGE_EXTENSIONS = [".jpg", ".png", ".webp", ".jpeg"];
+const IMAGE_EXTENSIONS = [".avif", ".jpg", ".png", ".webp", ".jpeg"];
 
 /** Foto del cliente en el anillo de Instagram. Sin archivo, cae al monograma. */
 function Avatar({
