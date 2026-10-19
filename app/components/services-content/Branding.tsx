@@ -29,7 +29,7 @@ export default function Branding({ whatsappLink }: { whatsappLink: string }) {
       {/* BLOQUE VISUAL */}
       <div className="grid md:grid-cols-2 gap-16 items-center mb-32 px-6">
         <img
-          src="/Tarjeta.png"
+          src="/Tarjeta.avif"
           className="w-full h-105 object-cover rounded-2xl shadow-2xl ring-1 ring-white/10 filter grayscale"
           alt="Branding coherente"
         />

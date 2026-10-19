@@ -35,7 +35,7 @@ const CASE_DATA: CaseData = {
   industry: "Derecho Administrativo",
   monogram: "LP",
   video: "/testimonio-libardo.mp4",
-  poster: "/testimonio-libardo-poster.jpg",
+  poster: "/testimonio-libardo-poster.avif",
   challenge:
     "Libardo ya tenía la trayectoria, los casos y el nombre. Lo que no tenía era dónde contarlo: ni perfil, ni contenido, ni marca. Su reputación vivía en las salas y en el voz a voz, pero no en una pantalla.",
   approach:

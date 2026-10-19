@@ -55,7 +55,7 @@ export default function Header() {
             animate={{ opacity: menuOpen ? 0 : 1 }}
           >
             <Image
-              src={"/white.png"}
+              src={"/white.avif"}
               alt="logo"
               width={90}
               height={40}
